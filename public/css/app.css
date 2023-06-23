@@ -1,0 +1,1214 @@
+* {
+  font-family: "Varela Round", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+}
+
+input, button, textarea {
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.navbar img {
+  width: 100%;
+  max-width: 10rem;
+  height: 80px;
+  margin: auto 0;
+  cursor: pointer;
+}
+.navbar ul {
+  line-height: 30px;
+}
+.navbar ul li {
+  display: inline-block;
+  margin: 5px 35px;
+  font-weight: 600;
+}
+.navbar ul li a:hover {
+  color: #30A2FF;
+}
+.navbar ul li a i.fa-user {
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid black;
+  padding: 8px;
+  transition: background-color 0.3s ease;
+}
+.navbar ul li a i.fa-user:hover {
+  background-color: #30A2FF;
+  border: 2px solid #30A2FF;
+  color: white;
+}
+.navbar select {
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+.navbar select option {
+  cursor: pointer;
+}
+.navbar #profile {
+  background: none;
+}
+.navbar #check {
+  display: none;
+}
+.navbar .hamburger {
+  display: none;
+  cursor: pointer;
+  margin: 25px 35px;
+  font-size: larger;
+  z-index: 12;
+}
+@media (max-width: 1100px) {
+  .navbar ul li {
+    margin: 5px 20px;
+  }
+}
+@media (max-width: 800px) {
+  .navbar img {
+    width: 100%;
+    height: 70px;
+  }
+  .navbar .hamburger {
+    display: block;
+  }
+  .navbar #check:checked ~ ul {
+    display: block;
+    right: 100px;
+    width: 250px;
+    height: 200px;
+    top: 60px;
+    opacity: 1;
+  }
+  .navbar #check:checked ~ ul li {
+    display: block;
+    font-size: 20px;
+    margin: 25px auto;
+    text-align: center;
+    line-height: 30px;
+  }
+  .navbar #check:checked ~ ul li select {
+    display: inline;
+    background-color: #FFF5B8;
+    padding: 5px 20px;
+    border-radius: 30px;
+  }
+  .navbar ul {
+    position: fixed;
+    z-index: 9;
+    top: 50px;
+    right: 40px;
+    border: 2px solid red;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 231, 160, 0.98);
+    border-radius: 30px;
+    transition: 0.2s;
+    border: 3px solid rgb(196, 196, 196);
+    line-height: 0;
+    opacity: 0;
+    padding: 1px 20px;
+    padding-right: 20px;
+  }
+  .navbar ul li {
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.2s;
+    line-height: 0;
+    letter-spacing: 0;
+    font-size: 0;
+  }
+  .navbar ul li select {
+    display: none;
+    transition: 0s;
+  }
+  .navbar ul li select option {
+    cursor: pointer;
+  }
+  .navbar ul li a:hover {
+    color: #30A2FF;
+  }
+}
+@media (max-width: 485px) {
+  .navbar img {
+    width: 60%;
+  }
+  .navbar .hamburger {
+    margin-right: -2%;
+  }
+  .navbar #check:checked ~ ul {
+    width: 100%;
+    right: 0;
+    top: 80px;
+  }
+}
+@media (max-width: 270px) {
+  .navbar select {
+    width: 100%;
+  }
+}
+
+.Myself {
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Myself .biografiTeks {
+  width: 55%;
+  margin: 20px;
+  cursor: default;
+  text-align: center;
+}
+.Myself .biografiTeks h3 {
+  font-weight: bold;
+  font-size: clamp(0.5rem, 5.5vw, 1.2rem);
+  margin-bottom: 10px;
+}
+.Myself .biografiTeks h1 {
+  font-weight: 700;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  margin-bottom: 5px;
+}
+.Myself .biografiTeks p {
+  font-size: clamp(0.5rem, 2.5vw, 1rem);
+}
+.Myself .profilePic {
+  max-width: 400px;
+  width: 100%;
+  margin: auto 20px;
+}
+.Myself .profilePic img {
+  border-radius: 10%;
+  box-shadow: 0 10px 10px black;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 1115px) {
+  .Myself .profilePic {
+    max-width: 350px;
+  }
+}
+@media (max-width: 1075px) {
+  .Myself .biografiTeks {
+    width: 90%;
+  }
+}
+@media (max-width: 710px) {
+  .Myself .biografiTeks {
+    text-align: center;
+    padding: 0;
+    margin: 5px;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .Myself .profilePic {
+    width: 90%;
+  }
+}
+
+.Allproject {
+  margin: 15% auto;
+  margin-bottom: 7.5%;
+  text-align: center;
+}
+.Allproject h1 {
+  font-weight: bold;
+  font-size: clamp(1.2rem, 4vw, 2.4rem);
+  margin: auto 5px;
+  font-style: italic;
+  text-decoration: underline;
+  letter-spacing: 2px;
+  color: grey;
+}
+.Allproject .mywork {
+  margin: 2% auto;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  width: 90%;
+  box-shadow: 2px 2px 5px black;
+  border-radius: 30px;
+  scroll-snap-type: x mandatory;
+  align-items: center;
+  height: 520px;
+}
+.Allproject .mywork .infobox {
+  background-color: #FFE7A0;
+  border-radius: 30px;
+  margin: auto 10px;
+  text-align: center;
+  width: 450px;
+  box-shadow: 2px 2px 2px 2px black;
+  scroll-snap-align: center;
+  cursor: default;
+  overflow: auto;
+  flex-shrink: 0;
+  height: 450px;
+}
+.Allproject .mywork .infobox img {
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+}
+.Allproject .mywork .infobox a {
+  font-weight: bold;
+  font-size: 30px;
+  background: none;
+  cursor: pointer;
+}
+.Allproject .mywork .infobox a:hover {
+  color: rgb(0, 81, 255);
+}
+.Allproject .mywork .infobox p {
+  background: none;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 15px;
+}
+.Allproject .mywork .infobox form {
+  top: 200px;
+  background: none;
+}
+.Allproject .mywork .infobox form button {
+  background: none;
+  cursor: pointer;
+}
+.Allproject .mywork .infobox::-webkit-scrollbar {
+  width: 0;
+  cursor: pointer;
+}
+.Allproject .mywork .infobox::-webkit-scrollbar-track {
+  cursor: pointer;
+  background-color: none;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.Allproject .mywork .infobox::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background-color: #00C4FF;
+  border: 2px solid #00C4FF;
+  border-radius: 50px;
+}
+.Allproject .mywork #firstwork {
+  margin-left: 30px;
+}
+.Allproject .mywork #lastwork {
+  margin-right: 30px;
+}
+.Allproject .mywork::-webkit-scrollbar {
+  width: 0;
+  cursor: pointer;
+}
+.Allproject .mywork::-webkit-scrollbar-track {
+  cursor: pointer;
+  background-color: none;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.Allproject .mywork::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background-color: #00C4FF;
+  border: 2px solid #00C4FF;
+  border-radius: 50px;
+}
+@media (max-width: 600px) {
+  .Allproject .mywork {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 520px;
+  }
+  .Allproject .mywork .infobox {
+    margin: 20px;
+    width: 95%;
+    height: 90%;
+  }
+  .Allproject .mywork .infobox img {
+    width: 100%;
+    height: 60%;
+  }
+}
+@media (max-width: 400px) {
+  .Allproject .mywork {
+    margin: 10% auto;
+    height: auto;
+    padding: 5px 10px;
+  }
+  .Allproject .mywork .infobox {
+    min-width: 100%;
+    height: 90%;
+  }
+  .Allproject .mywork .infobox img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.Allproject .mywork::-webkit-scrollbar {
+  height: 0.5vw;
+  cursor: pointer;
+}
+.Allproject .mywork::-webkit-scrollbar-track {
+  cursor: pointer;
+  background-color: none;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+.Allproject .mywork::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background-color: #00C4FF;
+  border: 2px solid #00C4FF;
+  border-radius: 50px;
+}
+
+.My-skill {
+  margin-top: 15%;
+  margin-bottom: 20%;
+  text-align: center;
+}
+.My-skill h1 {
+  font-weight: bold;
+  font-size: clamp(1.2rem, 4vw, 2.4rem);
+  margin: auto 5px;
+  font-style: italic;
+  text-decoration: underline;
+  letter-spacing: 2px;
+  color: grey;
+}
+.My-skill .scrollSkill {
+  display: flex;
+  overflow-x: auto;
+  border-radius: 30px;
+  max-width: 90%;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2% auto;
+  box-shadow: 2px 2px 5px black;
+  scroll-snap-type: x mandatory;
+  padding: 5px 10px;
+}
+.My-skill .scrollSkill .theSkill {
+  border: 2px solid #30A2FF;
+  width: 100%;
+  width: 320px;
+  flex-shrink: 0;
+  background-color: #FFE7A0;
+  margin: 10px;
+  border-radius: 30px;
+  scroll-snap-align: center;
+  box-shadow: 2px 2px 5px black;
+  padding: 5px 20px;
+}
+.My-skill .scrollSkill .theSkill h3 {
+  font-size: clamp(17px, 2vw, 24px);
+  font-weight: bold;
+  margin-bottom: 10px;
+  background-color: #00C4FF;
+  border-radius: 30px;
+  padding: 5px 20px;
+  text-align: center;
+  color: white;
+  margin: 5px;
+}
+.My-skill .scrollSkill .theSkill .detailSkill {
+  text-align: center;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.My-skill .scrollSkill .theSkill .detailSkill p {
+  font-weight: 400;
+  margin: 5px 0;
+  font-size: clamp(14px, 2vw, 18px);
+}
+@media (max-width: 420px) {
+  .My-skill .scrollSkill .theSkill {
+    width: 100%;
+    min-width: 320px;
+  }
+}
+@media (max-width: 396px) {
+  .My-skill .scrollSkill .theSkill {
+    min-width: 220px;
+  }
+}
+@media (max-width: 286px) {
+  .My-skill .scrollSkill .theSkill {
+    min-width: 100%;
+  }
+}
+.My-skill .scrollSkill::-webkit-scrollbar {
+  height: 0.5vw;
+}
+.My-skill .scrollSkill::-webkit-scrollbar-track {
+  background-color: none;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+.My-skill .scrollSkill::-webkit-scrollbar-thumb {
+  background-color: #00C4FF;
+  border: 2px solid #00C4FF;
+  border-radius: 50px;
+}
+
+@media (max-width: 480px) {
+  .scrollSkill {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+  }
+  .scrollSkill .theSkill {
+    min-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .theSkill {
+    width: calc(50% - 40px);
+  }
+}
+.container-education {
+  margin: 20% auto;
+}
+.container-education h3 {
+  font-weight: bold;
+  font-size: clamp(1rem, 4vw, 2.4rem);
+  margin: 3% 5px;
+  font-style: italic;
+  letter-spacing: 2px;
+  color: grey;
+  text-align: center;
+}
+.container-education h3 span {
+  text-decoration: underline;
+}
+.container-education .education {
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  grid-gap: 20px;
+  margin: auto;
+  overflow-y: auto;
+  max-height: 500px;
+  box-shadow: 2px 2px 5px black;
+  max-width: 80%;
+  justify-items: center;
+}
+.container-education .education a {
+  width: 90%;
+}
+.container-education .education .sertif-box {
+  padding: 5px;
+  display: flex;
+  border-radius: 30px;
+  background-color: #FFE7A0;
+  align-items: center;
+  margin: 10px auto;
+  width: 300px;
+  box-shadow: 2px 2px 5px black;
+  justify-items: center;
+}
+.container-education .education .sertif-box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+}
+.container-education .education .sertif-box .sertif-name {
+  margin: 2%;
+  max-width: 18rem;
+}
+.container-education .education .sertif-box .sertif-name h1 {
+  font-weight: bold;
+  font-size: clamp(14px, 2vw, 16px);
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.container-education .education .sertif-box .sertif-name p {
+  word-break: break-all;
+  word-wrap: break-word;
+  font-style: italic;
+  font-size: clamp(10px, 1.5vw, 15px);
+}
+@media (max-width: 956px) {
+  .container-education .education {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container-education .education .sertif-box {
+    width: 100%;
+  }
+}
+@media (max-width: 830px) {
+  .container-education .education {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .container-education .education .sertif-box {
+    width: 100%;
+  }
+}
+.container-education .education::-webkit-scrollbar {
+  width: 0.5vw;
+  height: 0;
+  background: none;
+}
+.container-education .education::-webkit-scrollbar-track {
+  background: none;
+  margin-left: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.container-education .education::-webkit-scrollbar-thumb {
+  background-color: #30A2FF;
+  border: 2px solid #30A2FF;
+  border-radius: 50px;
+}
+.container-education .school-history {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 2rem auto;
+  cursor: default;
+}
+.container-education .school-history h1 {
+  box-shadow: 2px 2px 5px black;
+  background: #FFF5B8;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 30px;
+  padding: 2px 15px;
+  margin: 1%;
+  font-size: clamp(12px, 2vw, 20px);
+}
+
+.container-contact {
+  margin: 12% 0;
+}
+.container-contact h1 {
+  cursor: default;
+  text-align: center;
+  font-weight: bold;
+  font-size: clamp(1rem, 4vw, 2.4rem);
+  margin: 0.2% 5px;
+  font-style: italic;
+  letter-spacing: 2px;
+  color: grey;
+  text-align: center;
+}
+.container-contact .contact-me {
+  width: 90%;
+  margin: 2% auto;
+  display: flex;
+  justify-content: center;
+}
+.container-contact .contact-me .symbol-contact {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+  flex-shrink: 0;
+}
+.container-contact .contact-me .symbol-contact img {
+  width: 120px;
+  margin: 20px auto;
+}
+.container-contact .contact-me .symbol-contact h3 {
+  font-weight: bold;
+  font-size: clamp(24px, 4vw, 45px);
+  color: grey;
+  margin-top: -3%;
+}
+.container-contact .contact-me .symbol-contact p {
+  font-size: clamp(16px, 2vw, 20px);
+  color: grey;
+  margin-top: -5%;
+}
+.container-contact .contact-me .symbol-contact .detail-contact i {
+  font-size: 30px;
+  margin: 20px;
+  color: #ddbb54;
+  cursor: pointer;
+}
+.container-contact .contact-me form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  flex-shrink: 0;
+}
+.container-contact .contact-me form input {
+  background-color: rgba(239, 239, 239, 0.3);
+  width: 95%;
+  margin: 10px auto;
+  border-radius: 30px;
+  padding: 5px 20px;
+  height: 50px;
+  border-bottom: 2px solid black;
+}
+.container-contact .contact-me form textarea {
+  border-bottom: 2px solid black;
+  background-color: rgba(239, 239, 239, 0.3);
+  width: 95%;
+  height: 300px;
+  border-radius: 30px;
+  padding: 5px 20px;
+  resize: none;
+}
+.container-contact .contact-me form button {
+  border-radius: 30px;
+  margin-top: 50px;
+  padding: 10px 25px;
+  font-weight: bold;
+  color: black;
+  background-color: #FFE7A0;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px auto;
+}
+.container-contact .contact-me form button:hover {
+  color: white;
+  background-color: #30A2FF;
+}
+
+@media (max-width: 1175px) {
+  .container-contact {
+    width: 100%;
+    margin: 25% auto;
+  }
+  .container-contact .contact-me {
+    flex-direction: column;
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .container-contact .symbol-contact {
+    min-width: 90%;
+    margin-bottom: 20px;
+    margin: auto;
+    flex-shrink: 0;
+  }
+  .container-contact form {
+    margin: auto;
+    min-width: 90%;
+  }
+}
+.kumpulbox {
+  min-height: 80.7vh;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.kumpulbox .box {
+  max-width: 350px;
+  text-align: center;
+  background-color: #FFE7A0;
+  border-radius: 25px;
+  margin: 20px;
+  max-height: 400px;
+  box-shadow: 5px 5px 10px black;
+  position: relative;
+  z-index: 1;
+  width: 40%;
+}
+.kumpulbox .box img {
+  border-radius: 25px 25px 0 0;
+  width: 100%;
+  min-height: 200px;
+  max-height: 200px;
+  background-color: #FFE7A0;
+  position: relative;
+  z-index: 2;
+}
+.kumpulbox .box .tempatgambar {
+  border-radius: 25px 25px 0 0;
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  display: grid;
+  place-items: center;
+  max-height: 200px;
+  height: 100%;
+  border-radius: 25px 25px 0 0;
+}
+.kumpulbox .box .tempatgambar i {
+  margin: 2px;
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  right: 0;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+.kumpulbox .box .tempatgambar #iakhir {
+  top: 100px;
+}
+.kumpulbox .box .tempatgambar:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.kumpulbox .box .tempatgambar:hover i {
+  opacity: 1;
+}
+.kumpulbox .box .infobox {
+  border-radius: 0 0 25px 25px;
+  width: 100%;
+  height: 150px;
+  overflow-y: auto;
+  padding: 5px;
+  cursor: default;
+}
+.kumpulbox .box .infobox #title {
+  word-wrap: break-word;
+  width: 100%;
+  font-weight: bold;
+  font-size: 30px;
+  cursor: pointer;
+}
+.kumpulbox .box .infobox::-webkit-scrollbar {
+  background-color: none;
+  width: 0.1vw;
+}
+.kumpulbox .box .infobox::-webkit-scrollbar-track {
+  background-color: green;
+  height: 10px;
+  margin-bottom: 25px;
+  border-radius: 100px;
+}
+.kumpulbox .box .infobox::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-color: #FFE7A0;
+}
+.kumpulbox .boxPlus {
+  max-width: 350px;
+  text-align: center;
+  background-color: #FFE7A0;
+  background: none;
+  border-radius: 25px;
+  margin: 20px;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  margin: 100px 20px;
+}
+@media (max-width: 1298px) {
+  .kumpulbox .box {
+    width: 40%;
+    margin: 10px auto;
+  }
+}
+@media (max-width: 871px) {
+  .kumpulbox .box {
+    margin: 10px;
+    max-width: 40%;
+    min-width: 250px;
+    max-height: 400px;
+  }
+}
+@media (max-width: 603px) {
+  .kumpulbox .box {
+    min-width: 90%;
+  }
+}
+
+.kumpulbox::-webkit-scrollbar {
+  display: none;
+}
+
+.no-post {
+  align-items: center;
+  margin-top: 10%;
+}
+.no-post p {
+  font-weight: bold;
+  font-size: clamp(15px, 3vw, 54px);
+  color: rgb(183, 182, 182);
+}
+
+.creatediv {
+  text-align: center;
+}
+.creatediv form {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 20px auto;
+  min-height: 500px;
+  padding: 20px;
+}
+.creatediv form input {
+  margin: 20px 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  max-width: 250px;
+  width: 100%;
+  background-color: #eeeeee;
+}
+.creatediv form textarea {
+  background-color: #eeeeee;
+  margin: 20px auto;
+  border-radius: 30px;
+  border: none;
+  padding: 20px 30px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  resize: none;
+  text-align: justify;
+}
+.creatediv form textarea::-webkit-scrollbar {
+  width: 0.5vw;
+}
+.creatediv form textarea::-webkit-scrollbar-track {
+  background-color: none;
+  height: 10px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  border-radius: 100px;
+}
+.creatediv form textarea::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-color: #00C4FF;
+}
+.creatediv form button {
+  margin: 20px 10px;
+  border-radius: 30px;
+  border: none;
+  padding: 10px;
+  width: 150px;
+  font-weight: 900;
+  cursor: pointer;
+  background-color: #30A2FF;
+  color: white;
+}
+
+.container-login {
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  border-radius: 30px;
+  cursor: default;
+  height: 700px;
+}
+.container-login .estetic-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-login .estetic-form img {
+  max-width: 500px;
+  width: 100%;
+}
+.container-login .estetic-form .spin {
+  max-width: 500px;
+  width: 100%;
+  animation-name: spin-animation;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes spin-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.container-login .loginForm {
+  text-align: center;
+  padding: 10px;
+  background-color: #f8e6af;
+  border-radius: 30px;
+  height: 100%;
+  cursor: default;
+  width: 700px;
+  margin: 0 10px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.container-login .loginForm h1 {
+  font-size: clamp(1rem, 5vw, 50px);
+  font-weight: bold;
+  margin-top: 20px;
+  animation: flicker 5s infinite;
+}
+.container-login .loginForm p {
+  font-size: x-small;
+}
+@keyframes flicker {
+  0% {
+    color: #30A2FF;
+  }
+  25% {
+    color: #00C4FF;
+  }
+  50% {
+    color: #b7ab61;
+  }
+  100% {
+    color: #30A2FF;
+  }
+}
+.container-login .loginForm form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.container-login .loginForm form input {
+  width: 95%;
+  margin: 20px auto;
+  border-radius: 30px;
+  padding: 5px 20px;
+  height: 50px;
+}
+.container-login .loginForm form .not-yet-login {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -2%;
+}
+.container-login .loginForm form .not-yet-login a {
+  font-size: clamp(0.5rem, 2vw, 15px);
+  font-weight: bold;
+  color: #a98d3b;
+}
+.container-login .loginForm form .not-yet-login a:hover {
+  color: #30A2FF;
+}
+.container-login .loginForm form button {
+  border-radius: 30px;
+  margin-top: 50px;
+  padding: 10px 25px;
+  font-weight: bold;
+  color: black;
+  background-color: #ddbb54;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px auto;
+}
+.container-login .loginForm form button:hover {
+  color: white;
+  background-color: #30A2FF;
+}
+@media (max-width: 1205px) {
+  .container-login .loginForm {
+    border-radius: 30px;
+  }
+  .container-login .estetic-form {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .container-login {
+    margin: 15% 10px;
+  }
+  .container-login .loginForm {
+    margin: 15% 10px;
+  }
+}
+@media (max-width: 870px) {
+  .loginForm {
+    margin: 15% 10px;
+  }
+}
+.Already-login {
+  min-height: 655px;
+}
+.Already-login form {
+  border-radius: 30px;
+  background-color: #FFF5B8;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 5% auto;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 2px 2px 5px black;
+}
+.Already-login form input {
+  border-radius: 30px;
+  background-color: #f1efef;
+  padding: 10px 20px;
+  width: 500px;
+  display: block;
+  margin: 5% auto;
+  box-shadow: 2px 2px 5px black;
+}
+.Already-login form button {
+  border-radius: 30px;
+  background-color: #30A2FF;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.editPortfolio {
+  margin: 5% auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: auto;
+}
+.editPortfolio .formEdit {
+  border-radius: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px 1%;
+  display: flex;
+  flex-direction: column;
+  background-color: #30A2FF;
+  padding: 10px;
+}
+.editPortfolio .formEdit h1 {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+.editPortfolio .formEdit input {
+  padding: 10px 20px;
+  width: 500px;
+  margin: 5px;
+  border-radius: 30px;
+}
+.editPortfolio .formEdit textarea {
+  height: 200px;
+  border-radius: 30px;
+  padding: 10px;
+}
+.editPortfolio .formEdit button {
+  border-radius: 30px;
+  background-color: orange;
+  padding: 10px;
+  margin: 10px auto;
+  font-weight: bold;
+}
+@media (max-width: 580px) {
+  .editPortfolio .formEdit {
+    min-width: 100%;
+    align-items: center;
+  }
+  .editPortfolio .formEdit input {
+    width: 100%;
+  }
+  .editPortfolio .formEdit textarea {
+    width: 100%;
+  }
+}
+.editPortfolio textarea::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: none;
+}
+.editPortfolio textarea::-webkit-scrollbar-track {
+  background: none;
+  margin-left: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.editPortfolio textarea::-webkit-scrollbar-thumb {
+  background-color: #30A2FF;
+  border: 2px solid #30A2FF;
+  border-radius: 50px;
+}
+
+.isiblog .wrapperisi {
+  min-height: 700px;
+  padding: 20px;
+}
+.isiblog .wrapperisi h1 {
+  font-size: clamp(24px, 6vw, 48px);
+  text-align: center;
+}
+.isiblog .wrapperisi img {
+  display: flex;
+  margin: auto;
+  border-radius: 30px;
+  width: 60%;
+  max-height: 800px;
+  box-shadow: 5px 5px 10px black;
+}
+.isiblog .wrapperisi .infoblog {
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #30A2FF;
+  border-radius: 30px;
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+}
+.isiblog .wrapperisi .infoblog p {
+  margin: 10px 20px;
+  color: white;
+  font-size: clamp(12px, 2vw, 20px);
+}
+.isiblog .wrapperisi .infoblog p #identitasblog {
+  font-weight: 900;
+  font-style: italic;
+}
+.isiblog .wrapperisi .blognya {
+  border-radius: 30px;
+  padding: 20px;
+  margin: 10px auto;
+  background-color: #eeedde;
+  box-shadow: 5px 5px 10px black;
+  max-width: 1000px;
+  overflow: auto;
+}
+.isiblog .wrapperisi .blognya::-webkit-scrollbar {
+  background-color: none;
+  width: 0.5vw;
+}
+.isiblog .wrapperisi .blognya::-webkit-scrollbar-thumb {
+  background-color: #A3BB98;
+  border-radius: 100px;
+}
+.isiblog .wrapperisi .blognya::-webkit-scrollbar-track {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+@media (max-width: 470px) {
+  .isiblog .wrapperisi img {
+    border-radius: 10px;
+    width: 100%;
+  }
+}
+
+.footer {
+  background-color: #FFE7A0;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+.footer h1 {
+  font-size: clamp(16px, 3vw, 20px);
+  margin: 20px;
+  color: grey;
+  font-weight: bold;
+  text-align: center;
+}/*# sourceMappingURL=app.css.map */
